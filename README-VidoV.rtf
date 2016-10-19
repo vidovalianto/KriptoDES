@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red53\green53\blue53;}
+{\*\expandedcolortbl;\csgray\c100000;\cssrgb\c27059\c27059\c27059;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f0\fs24 \cf2 {\listtext	\uc0\u8259 	}Program ini dapat mengenkripsi data bertipe string dengan metode des\
+{\listtext	\uc0\u8259 	}Line (45-74) dari 64-bit key dengan tabel PC-1 akan mengenerate (56 bit) key. C0 adalah 28 character pertama dan D0 adalah 28 character terakhir, dan mengeluarkan hasilnya.\
+{\listtext	\uc0\u8259 	}Line (79-135) key C(1)-C(16) dan D(1)-D(16) akan di generate dengan left shift dari C atau D sebelumnya dengan syarat,jika i adalah 0 maka dilakukan 0 kali left shift,selain itu jika i adalah 1,2,9,16 maka dilakukan 1 kali left shift, selain itu dilakukan 2 kali left shift. Kemudian C(i) dan D(i) digabung dan membentuk K(i) dengan panjang 56-bit.\
+{\listtext	\uc0\u8259 	}Line (140-204) membuat pengurutan tabel PC-2 pada (56 bit) key K(1)-K(16) yang di dapat  dari gabungan C dan D tadi\
+{\listtext	\uc0\u8259 	}Line (209-223) plainteks diubah berdasarkan tabel IP.\
+{\listtext	\uc0\u8259 	}Line (224-241) plainteks yang telah diubah tadi tadi dibagi menjadi  L0 dan R0 (32 bit)\
+{\listtext	\uc0\u8259 	}Line (246-309) mengenerate L(1)-L(16) yang masing-masing adalah R(0)-R(15). L(i)=R(i-1).lalu  mengekspansi R(0)-R(15) dari panjang 32 bit menjadi 48 bit dengan Ekspansion Table.\
+{\listtext	\uc0\u8259 	}Line (324-329) dilakukan XOR K(1)-K(16) dengan Ekspansi R(1)-R(16) tadi.\
+{\listtext	\uc0\u8259 	}Line (337-508) hasil XOR disubtitusi dan menghasilkan string baru (32 bit) dengan Sbox.\
+{\listtext	\uc0\u8259 	}Line (510-557) hasil Sbox diubah dengan mengikuti Permutation Table sehingga menghasilkan string baru (32 bit).\
+{\listtext	\uc0\u8259 	}Line (560-571) dilakukan XOR pada string baru tadi   dengan L(i) menghasilkan R(i).\
+{\listtext	\uc0\u8259 	}Line (594-615) R(16) dengan L(16) digabungkan sehingga menghasilkan string baru dan dipermutasi sesuai tabel IP^-1.\
+{\listtext	\uc0\u8259 	}Hasil permutasi inilah yang merupakan ciphertext-nya.\
+{\listtext	\uc0\u8259 	}kontribusi saya dalam kelompok mencari referensi seperti cara kerja dan sejarah serta slide presentasi dan ikut presentasi\
+}
